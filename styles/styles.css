@@ -3,6 +3,9 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+div {
+  padding: 14px;
+}
 div.header {
   background: #404041;
 }
@@ -37,4 +40,8 @@ input {
 .button:hover {
   color: #FFFFFF !important;
   background: #EB008B;
+}
+
+.button:focus {
+  outline:0;
 }
