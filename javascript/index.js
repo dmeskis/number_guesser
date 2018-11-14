@@ -12,7 +12,10 @@ function clearInput() {
 
 function reset() {
   randomNumber = generateRandomNumber();
-  clearInput()
+  document.getElementById('user-guess').innerHTML = '';
+  document.getElementById('result-top-text').innerHTML = "C'mon, take a guess!";
+  document.getElementById('result-bottom-text').innerHTML = "You know you want to.";
+  clearInput();
 }
 
 function guess() {
