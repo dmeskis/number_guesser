@@ -20,16 +20,15 @@ function guess() {
 }
 
 function clear() {
-  document.getElementById('user-input').reset;
+  document.getElementById('user-input').value = '';
 }
 
 function handleChange(input) {
-  if (input.value < 0) {
-    input.value = 0;
-    alert("Please enter a number between 0 and 100");
-  }
-  if (input.value > 100) {
-    input.value = 100;
-    alert("Please enter a number between 0 and 100");
-  }
+    if (input.value < 0) {
+      input.value = 0;
+      alert("Please enter a number between 0 and 100");
+    } else if (input.value > 100) {
+      input.value = 100;
+      alert("Please enter a number between 0 and 100");
+    }
 }
