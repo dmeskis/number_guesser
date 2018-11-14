@@ -16,8 +16,8 @@ function setGuessingRange() {
   maxRange = parseInt(document.getElementById('max-guess').value);
   if (isNaN(minRange) || isNaN(maxRange)) {
     alert("Please set a valid range.")
-    var minRange = 0
-    var maxRange = 100
+    minRange = 0
+    maxRange = 100
     return;
   }
   document.getElementById('rangeAlert').innerHTML = 'Range set!';
