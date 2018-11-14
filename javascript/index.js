@@ -14,6 +14,12 @@ function generateRandomNumber() {
 function setGuessingRange() {
   minRange = parseInt(document.getElementById('min-guess').value);
   maxRange = parseInt(document.getElementById('max-guess').value);
+  if (isNaN(minRange) || isNaN(maxRange)) {
+    alert("Please set a valid range.")
+    var minRange = 0
+    var maxRange = 100
+    return;
+  }
   document.getElementById('rangeAlert').innerHTML = 'Range set!';
   document.getElementById('min-guess').disabled = true;
   document.getElementById('max-guess').disabled = true;
