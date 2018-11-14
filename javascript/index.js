@@ -6,6 +6,9 @@ function generateRandomNumber() {
 
 randomNumber = generateRandomNumber();
 
+function clearInput() {
+  document.getElementById('user-input').value = '';
+}
 function guess() {
   var userGuess = parseInt(document.getElementById('user-input').value)
   var validGuess
@@ -31,10 +34,6 @@ function guess() {
   else {
     return;
   }
-}
-
-function clear() {
-  document.getElementById('user-input').value = '';
 }
 
 // function handleChange(input) {

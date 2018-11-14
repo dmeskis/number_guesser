@@ -9,11 +9,11 @@
       <h1 class='title-1'>Number</h1> <h1 class='title-2'>Guesser</h1>
     </div>
     <div class='user-input'>
-      <input id ='user-input' onchange="handleChange(this)" type='number' min='0' max='100' name='guess' placeholder='Enter your guess' size='40'/>
+      <input id ='user-input' type='number' min='0' max='100' name='guess' placeholder='Enter your guess' size='40'/>
     </div>
     <div class='user-options'>
       <button onclick="guess()" class='button' id='guess' type="button">Guess</button>
-      <button onclick="clear()" class='button' id='clear' type="button">Clear</button>
+      <button onclick="clearInput()" class='button' id='clear' type="button">Clear</button>
     </div>
     <div class='result'>
       <h2 id='result-top-text'>C'mon, take a guess!</h2>
