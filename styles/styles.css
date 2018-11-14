@@ -1,14 +1,10 @@
 body {
   text-align: center;
-  font-family: "Open Sans";
+  font-family: 'Open Sans', sans-serif;
 }
 
 div.header {
   background: #404041;
-}
-
-h1 {
-  font-family: "Open Sans";
 }
 
 h1.title-1 {
@@ -21,4 +17,24 @@ h1.title-2 {
   color: #E6E7E8;
   display: inline;
   font-weight: 300;
+}
+
+input {
+  border: solid 1px #929497;
+  color: #929497;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.button {
+  color: #FFFFFF !important;
+  font-size: 14px;
+  padding: 5px 35px;
+  -moz-border-radius: 18px;
+  -webkit-border-radius: 18px;
+  border-radius: 18px;
+  background: #929497;
+}
+.button:hover {
+  color: #FFFFFF !important;
+  background: #EB008B;
 }
