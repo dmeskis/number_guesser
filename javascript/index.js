@@ -13,6 +13,7 @@ function generateRandomNumber() {
 function setGuessingRange() {
   minRange = parseInt(document.getElementById('min-guess').value)
   maxRange = parseInt(document.getElementById('max-guess').value)
+  document.getElementById('rangeAlert').innerHTML = 'Range set!'
   randomNumber = generateRandomNumber();
 }
 
