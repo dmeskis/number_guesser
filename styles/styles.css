@@ -54,11 +54,14 @@ input[type=number] {
   border-radius: 18px;
   background: #929497;
 }
-.button:hover {
+.button:hover:enabled {
   color: #FFFFFF !important;
   background: #EB008B;
 }
 
+.button:disabled {
+  opacity: 0.3
+}
 .button:focus {
   outline:0;
 }
