@@ -11,9 +11,12 @@ function generateRandomNumber() {
 }
 
 function setGuessingRange() {
-  minRange = parseInt(document.getElementById('min-guess').value)
-  maxRange = parseInt(document.getElementById('max-guess').value)
-  document.getElementById('rangeAlert').innerHTML = 'Range set!'
+  minRange = parseInt(document.getElementById('min-guess').value);
+  maxRange = parseInt(document.getElementById('max-guess').value);
+  document.getElementById('rangeAlert').innerHTML = 'Range set!';
+  document.getElementById('min-guess').disabled = true;
+  document.getElementById('max-guess').disabled = true;
+  document.getElementById('setRangeButton').disabled = true;
   randomNumber = generateRandomNumber();
 }
 
@@ -59,6 +62,9 @@ function guess() {
       document.getElementById('result-bottom-text').innerHTML = "That is too low"
     } else if (userGuess === randomNumber) {
       document.getElementById('result-bottom-text').innerHTML = "BOOM!"
+      minRange = minRange - 10
+      maxRange = maxRange + 10
+      randomNumber = generateRandomNumber()
     }
   }
   else {
