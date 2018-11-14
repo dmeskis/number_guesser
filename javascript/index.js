@@ -1,5 +1,5 @@
 var randomNumber
-var guessButton = document.getElementById("guessButton")
+var resetButton = document.getElementById("resetButton")
 var clearButton = document.getElementById("clearButton")
 
 function generateRandomNumber() {
@@ -10,6 +10,12 @@ randomNumber = generateRandomNumber();
 
 function clearInput() {
   document.getElementById('user-input').value = '';
+  clearButton.disabled = true;
+}
+
+function enableButtons() {
+  clearButton.disabled = false;
+  resetButton.disabled = false;
 }
 
 function reset() {
@@ -18,6 +24,7 @@ function reset() {
   document.getElementById('result-top-text').innerHTML = "C'mon, take a guess!";
   document.getElementById('result-bottom-text').innerHTML = "You know you want to.";
   clearInput();
+  resetButton.disabled = true;
 }
 
 function guess() {
@@ -26,6 +33,7 @@ function guess() {
   if (userGuess > 100 || userGuess < 0) {
     document.getElementById('user-input').value = '';
     validGuess = false
+    clearButton.disabled = true;
     alert("Please enter a number between 0 and 100");
   } else {
     validGuess = true
