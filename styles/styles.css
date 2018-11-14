@@ -4,8 +4,9 @@ body {
 }
 
 div {
-  padding: 14px;
+  padding: 7px;
 }
+
 div.header {
   background: #404041;
 }
@@ -20,6 +21,21 @@ h1.title-2 {
   color: #E6E7E8;
   display: inline;
   font-weight: 300;
+}
+
+h1.user-guess {
+  color: #EB008B;
+  font-size: 120px;
+  font-weight: 300;
+}
+
+h2 {
+  color: #404041;
+  font-weight: 300;
+}
+
+div.result {
+  padding: 25px;
 }
 
 input {
