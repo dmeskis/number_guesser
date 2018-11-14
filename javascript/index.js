@@ -1,4 +1,6 @@
 var randomNumber
+var guessButton = document.getElementById("guessButton")
+var clearButton = document.getElementById("clearButton")
 
 function generateRandomNumber() {
   return Math.floor(Math.random() * 101);
@@ -44,13 +46,3 @@ function guess() {
     return;
   }
 }
-
-// function handleChange(input) {
-//     if (input.value < 0) {
-//       input.value = 0;
-//       alert("Please enter a number between 0 and 100");
-//     } else if (input.value > 100) {
-//       input.value = 100;
-//       alert("Please enter a number between 0 and 100");
-//     }
-// }
