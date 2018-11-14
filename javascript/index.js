@@ -9,6 +9,11 @@ randomNumber = generateRandomNumber();
 function clearInput() {
   document.getElementById('user-input').value = '';
 }
+
+function reset() {
+  randomNumber = generateRandomNumber();
+}
+
 function guess() {
   var userGuess = parseInt(document.getElementById('user-input').value)
   var validGuess
