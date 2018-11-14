@@ -38,10 +38,11 @@ div.result {
   padding: 25px;
 }
 
-input {
+input[type=number] {
   border: solid 1px #929497;
   color: #929497;
   font-family: 'Open Sans', sans-serif;
+  width: 120px;
 }
 
 .button {

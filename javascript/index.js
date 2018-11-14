@@ -1,6 +1,6 @@
 
 function generateRandomNumber() {
-  return Math.floor(Math.random() * 100);
+  return Math.floor(Math.random() * 101);
 }
 
 var randomNumber
@@ -16,5 +16,16 @@ function guess() {
     document.getElementById('result-bottom-text').innerHTML = "That is too low"
   } else if (userGuess === randomNumber) {
     document.getElementById('result-bottom-text').innerHTML = "BOOM!"
+  }
+}
+
+function handleChange(input) {
+  if (input.value < 0) {
+    input.value = 0;
+    alert("Please enter a number between 0 and 100");
+  }
+  if (input.value > 100) {
+    input.value = 100;
+    alert("Please enter a number between 0 and 100");
   }
 }
