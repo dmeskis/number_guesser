@@ -1,9 +1,23 @@
 var randomNumber
 var resetButton = document.getElementById("resetButton")
 var clearButton = document.getElementById("clearButton")
+var minRange = 0
+var maxRange = 100
 
 function generateRandomNumber() {
-  return Math.floor(Math.random() * 101);
+   min = Math.ceil(minRange);
+   max = Math.floor(maxRange);
+   return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function setGuessingRange() {
+  minRange = parseInt(document.getElementById('min-guess').value);
+  maxRange = parseInt(document.getElementById('max-guess').value);
+  document.getElementById('rangeAlert').innerHTML = 'Range set!';
+  document.getElementById('min-guess').disabled = true;
+  document.getElementById('max-guess').disabled = true;
+  document.getElementById('setRangeButton').disabled = true;
+  randomNumber = generateRandomNumber();
 }
 
 randomNumber = generateRandomNumber();
@@ -30,11 +44,11 @@ function reset() {
 function guess() {
   var userGuess = parseInt(document.getElementById('user-input').value)
   var validGuess
-  if (userGuess > 100 || userGuess < 0) {
+  if (userGuess > maxRange || userGuess < minRange) {
     document.getElementById('user-input').value = '';
     validGuess = false
     clearButton.disabled = true;
-    alert("Please enter a number between 0 and 100");
+    alert(`Please enter a number between ${minRange} and ${maxRange}`);
   } else {
     validGuess = true
     document.getElementById('result-top-text').innerHTML = "Your last guess was"
@@ -48,6 +62,9 @@ function guess() {
       document.getElementById('result-bottom-text').innerHTML = "That is too low"
     } else if (userGuess === randomNumber) {
       document.getElementById('result-bottom-text').innerHTML = "BOOM!"
+      minRange = minRange - 10
+      maxRange = maxRange + 10
+      randomNumber = generateRandomNumber()
     }
   }
   else {
