@@ -12,6 +12,7 @@ function clearInput() {
 
 function reset() {
   randomNumber = generateRandomNumber();
+  clearInput()
 }
 
 function guess() {
