@@ -1,10 +1,10 @@
+var randomNumber
 
 function generateRandomNumber() {
   return Math.floor(Math.random() * 101);
 }
 
-var randomNumber
-randomNumber = generateRandomNumber()
+randomNumber = generateRandomNumber();
 
 function guess() {
   var userGuess = parseInt(document.getElementById('user-input').value)
@@ -17,6 +17,10 @@ function guess() {
   } else if (userGuess === randomNumber) {
     document.getElementById('result-bottom-text').innerHTML = "BOOM!"
   }
+}
+
+function clear() {
+  document.getElementById('user-input').reset;
 }
 
 function handleChange(input) {
